@@ -1,7 +1,8 @@
 package com.example.xiaoshuo.service;
 
-import com.example.xiaoshuo.entity.User;
+import com.example.xiaoshuo.entity.UserInfo;
 
 public interface IUserService {
-    Boolean login(User user);
+    Boolean login(UserInfo userInfo);
+    Boolean saveUserInfo(UserInfo userInfo);
 }

@@ -11,4 +11,8 @@ public class IndexController {
     public String index(){
         return "index";
     }
+    @RequestMapping("register")
+    public String save(){
+        return "register";
+    }
 }
