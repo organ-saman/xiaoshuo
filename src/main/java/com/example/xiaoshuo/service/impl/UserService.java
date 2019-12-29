@@ -19,7 +19,8 @@ public class UserService implements IUserService {
             return false;
         }
         String passWord = userInfo.getPassWord();
-        if(passWord != user.getPassWord()){
+        String md5 = MD5Util.getMD5(user.getPassWord());
+        if(passWord != md5){
             return false;
         }
         return true;
