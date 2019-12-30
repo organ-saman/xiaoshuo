@@ -1,7 +1,7 @@
 package com.example.xiaoshuo.controller;
 
 import com.example.xiaoshuo.entity.UserInfo;
-import com.example.xiaoshuo.service.IUserService;
+import com.example.xiaoshuo.service.IUserInfoService;
 import com.example.xiaoshuo.vo.JsonResult;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,12 +13,12 @@ import javax.annotation.Resource;
 @RequestMapping("/user/")
 public class UserController {
     @Resource
-    private IUserService iUserService;
+    private IUserInfoService iUserInfoService;
 
     @RequestMapping("login")
     @ResponseBody
     public JsonResult login(UserInfo UserInfo) {
-        Boolean login = iUserService.login(UserInfo);
+        Boolean login = iUserInfoService.login(UserInfo);
         if(login){
             return new JsonResult(1,"ok","登录成功");
         }else{
@@ -28,7 +28,7 @@ public class UserController {
     @RequestMapping("save")
     @ResponseBody
     public JsonResult saveUserInfo(UserInfo userInfo){
-        Boolean aBoolean = iUserService.saveUserInfo(userInfo);
+        Boolean aBoolean = iUserInfoService.saveUserInfo(userInfo);
         if(aBoolean){
             return new JsonResult(1,"ok","注册成功");
         }else{
