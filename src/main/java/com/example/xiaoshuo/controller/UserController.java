@@ -4,11 +4,14 @@ import com.example.xiaoshuo.entity.UserInfo;
 import com.example.xiaoshuo.service.IUserInfoService;
 import com.example.xiaoshuo.vo.JsonResult;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
-
+//处理异步请求,可以用于Controller或者处理请求的方法上
+//@CrossOrigin(origins = "http://localhost:9520", methods = RequestMethod.POST)
 @Controller
 @RequestMapping("/user/")
 public class UserController {
