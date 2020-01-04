@@ -1,7 +1,11 @@
 package com.example.xiaoshuo.vo;
 
 import java.io.Serializable;
-
+/**
+ * @author zhaomeng
+ * @date 2020.1.3
+ * 前端返回字段
+ */
 public class JsonResult implements Serializable {
     private int state = 1;
     private String message = "ok";

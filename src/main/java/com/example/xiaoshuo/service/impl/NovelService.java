@@ -8,7 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-
+/**
+ * @author zhaomeng
+ * @date 2020.1.3
+ * 小说主表服务，处理小说主表服务
+ */
 @Service
 public class NovelService implements INovelService {
     public static Logger LOGGER = Logger.getLogger(NovelService.class);

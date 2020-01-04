@@ -8,7 +8,11 @@ import com.example.xiaoshuo.service.INovelService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-
+/**
+ * @author zhaomeng
+ * @date 2020.1.3
+ * 小说章节服务类，处理小说章节服务
+ */
 @Service
 public class NovelContentService implements INovelContentService {
     @Resource

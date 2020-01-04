@@ -4,7 +4,11 @@ import org.apache.log4j.Logger;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-
+/**
+ * @author zhaomeng
+ * @date 2020.1.3
+ * MD5工具类
+ */
 public class MD5Util {
     public static Logger LOGGER = Logger.getLogger(MD5Util.class);
     public static String getMD5(String str){
