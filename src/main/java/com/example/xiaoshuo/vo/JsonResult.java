@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class JsonResult implements Serializable {
     private int state = 1;
     private String message = "ok";
-    private Object date;
+    private Object data;
 
     public JsonResult(int state) {
         this.state = state;
@@ -15,14 +15,14 @@ public class JsonResult implements Serializable {
         this.message = message;
     }
 
-    public JsonResult(int state, String message, Object date) {
+    public JsonResult(int state, String message, Object data) {
         this.state = state;
         this.message = message;
-        this.date = date;
+        this.data = data;
     }
 
-    public JsonResult(Object date) {
-        this.date = date;
+    public JsonResult(Object data) {
+        this.data = data;
     }
 
     public int getState() {
@@ -41,11 +41,11 @@ public class JsonResult implements Serializable {
         this.message = message;
     }
 
-    public Object getDate() {
-        return date;
+    public Object getData() {
+        return data;
     }
 
-    public void setDate(Object date) {
-        this.date = date;
+    public void setData(Object data) {
+        this.data = data;
     }
 }

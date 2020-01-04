@@ -9,7 +9,5 @@ public class Novel extends BaseEntity{
     private String novelName;
     private String novelAuthor;
     private String novelType;
-    private String novelCharacter;
-    private String novel;
     private Boolean delFlag;
 }

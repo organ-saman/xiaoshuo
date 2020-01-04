@@ -23,14 +23,14 @@
         </trim>
         values
         <trim prefix="(" suffix=")">
-                #{PersonInfo.id},
-                #{PersonInfo.userInfoId},
-                #{PersonInfo.personName},
-                #{PersonInfo.gender},
-                #{PersonInfo.birthday},
-                #{PersonInfo.delFlag},
-                #{PersonInfo.createTime},
-                #{PersonInfo.updateTime}
+                #{personInfo.id},
+                #{personInfo.userInfoId},
+                #{personInfo.personName},
+                #{personInfo.gender},
+                #{personInfo.birthday},
+                #{personInfo.delFlag},
+                #{personInfo.createTime},
+                #{personInfo.updateTime}
         </trim>
     </insert>
 </mapper>

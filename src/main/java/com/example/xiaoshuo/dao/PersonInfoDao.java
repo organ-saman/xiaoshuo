@@ -6,6 +6,6 @@ import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface PersonInfoDao {
-    PersonInfo selectOneByUserInfoId(@Param("UserInfoId")Integer UserInfoId);
-    Integer insertOne(@Param("PersonInfo") PersonInfo personInfo);
+    PersonInfo selectOneByUserInfoId(@Param("userInfoId")Integer UserInfoId);
+    Integer insertOne(@Param("personInfo") PersonInfo personInfo);
 }

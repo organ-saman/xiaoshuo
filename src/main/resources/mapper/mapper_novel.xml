@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.xiaoshuo.dao.NovelDao">
     <sql id="novel">
-         id,novel_name,novel_author,novel_type,novel_character,novel,del_flag,create_time,update_time
+         id,novel_name,novel_author,novel_type,del_flag,create_time,update_time
     </sql>
     <select id = "selectOne" resultType = "com.example.xiaoshuo.entity.Novel">
         select 
@@ -23,15 +23,13 @@
         </trim>
         values
         <trim prefix="(" suffix=")">
-                #{Novel.id},
-                #{Novel.novelName},
-                #{Novel.novelAuthor},
-                #{Novel.novelType},
-                #{Novel.novelCharacter},
-                #{Novel.novel},
-                #{Novel.delFlag},
-                #{Novel.createTime},
-                #{Novel.updateTime}
+                #{novel.id},
+                #{novel.novelName},
+                #{novel.novelAuthor},
+                #{novel.novelType},
+                #{novel.delFlag},
+                #{novel.createTime},
+                #{novel.updateTime}
         </trim>
     </insert>
 </mapper>

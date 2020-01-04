@@ -6,6 +6,6 @@ import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface NovelDao {
-    Novel selectOne(@Param("NovelName")String NovelName);
-    Integer insertOne(@Param("Novel") Novel novel);
+    Novel selectOne(@Param("novelName")String NovelName);
+    Integer insertOne(@Param("novel") Novel novel);
 }

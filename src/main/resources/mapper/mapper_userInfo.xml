@@ -9,7 +9,7 @@
     <select id = "selectOne" resultType = "com.example.xiaoshuo.entity.UserInfo">
         select 
         <include refid="user_info"/>
-        from stu
+        from user_info
         <where>
             <if test="userId !=null and userId !=''">
                 user_id=#{userId}
@@ -17,22 +17,22 @@
         </where>
     </select>
     <insert id="insertOne" parameterType="com.example.xiaoshuo.entity.UserInfo">
-        insert into stu
+        insert into user_info
         <trim prefix="(" suffix=")">
             <include refid="user_info"></include>
         </trim>
         values
         <trim prefix="(" suffix=")">
-                #{UserInfo.id},
-                #{UserInfo.userId},
-                #{UserInfo.passWord},
-                #{UserInfo.userName},
-                #{UserInfo.gender},
-                #{UserInfo.birthday},
-                #{UserInfo.mark},
-                #{UserInfo.phoneNumber},
-                #{UserInfo.createTime},
-                #{UserInfo.updateTime}
+                #{userInfo.id},
+                #{userInfo.userId},
+                #{userInfo.passWord},
+                #{userInfo.userName},
+                #{userInfo.gender},
+                #{userInfo.birthday},
+                #{userInfo.mark},
+                #{userInfo.phoneNumber},
+                #{userInfo.createTime},
+                #{userInfo.updateTime}
         </trim>
     </insert>
 </mapper>
