@@ -4,15 +4,28 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.xiaoshuo.dao.NovelContentDao">
     <sql id="novel_content">
-         id,novel_id,chapter,chapter_name,content,create_time,update_time
+         id,novel_id,chapter,chapter_id,chapter_name,content,create_time,update_time
     </sql>
-    <select id = "selectOne" resultType = "com.example.xiaoshuo.entity.NovelContent">
+    <select id = "selectList" resultType = "com.example.xiaoshuo.entity.NovelContent">
         select 
         <include refid="novel_content"/>
         from novel_content
         <where>
             <if test="novelId !=null and novelId !=''">
                 novel_id=#{novelId,jdbcType=INTEGER}
+            </if>
+        </where>
+    </select>
+    <select id = "selectOne" resultType = "com.example.xiaoshuo.entity.NovelContent">
+        select
+        <include refid="novel_content"/>
+        from novel_content
+        <where>
+            <if test="novelId !=null and novelId !=''">
+                novel_id=#{novelId,jdbcType=INTEGER}
+            </if>
+            <if test="novelId !=null and novelId !=''">
+                and novel_id=#{novelId,jdbcType=INTEGER}
             </if>
         </where>
     </select>
@@ -26,6 +39,7 @@
                 #{novelContent.id},
                 #{novelContent.novelId},
                 #{novelContent.chapter},
+                #{novelContent.chapterId}
                 #{novelContent.chapterName},
                 #{novelContent.content},
                 #{novelContent.createTime},

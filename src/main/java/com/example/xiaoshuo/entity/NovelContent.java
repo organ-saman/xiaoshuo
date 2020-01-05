@@ -21,6 +21,10 @@ public class NovelContent extends BaseEntity{
      */
     private String chapter;
     /**
+     * 小说章节id
+     */
+    private Integer chapterId;
+    /**
      * 小说章节名称
      */
     private String chapterName;
