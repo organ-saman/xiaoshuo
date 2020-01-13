@@ -24,8 +24,8 @@
             <if test="novelId !=null and novelId !=''">
                 novel_id=#{novelId,jdbcType=INTEGER}
             </if>
-            <if test="novelId !=null and novelId !=''">
-                and novel_id=#{novelId,jdbcType=INTEGER}
+            <if test="chapterId !=null and chapterId !=''">
+                and chapter_id=#{chapterId,jdbcType=INTEGER}
             </if>
         </where>
     </select>

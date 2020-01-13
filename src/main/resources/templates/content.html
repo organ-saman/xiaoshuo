@@ -24,7 +24,7 @@
         </div>
         <div class="text-center">
             <h3 v-for="item in list">
-                <p>{{item.chapter}}{{ item.chapterName }}</p>
+                <a :href="now(item.novelId,item.chapterId)">{{item.chapter}}{{ item.chapterName }}</a>
             </h3>
         </div>
     </div>
@@ -52,8 +52,16 @@
             })
             },
             catalogue() {
-                this.$http.post('/novel/content',{novelName:'星辰变'},{emulateJSON:true}).then((result) => {
+                this.$http.post('/novel/contentByName',{novelName:'星辰变'},{emulateJSON:true}).then((result) => {
                     this.list = result.body.data
+                }, (result) => {
+                    console.log('获取小说失败')
+                })
+            },
+            now(itemNovelId,itemChapterId) {
+                this.$http.post('/novel/contentByNovelContent',{novelId:itemNovelId,chapterId:itemChapterId},{emulateJSON:true}).then((result) => {
+                    this.chapter = result.data.data.chapter,
+                    this.chapterName = result.data.data.chapterName
                 }, (result) => {
                     console.log('获取小说失败')
                 })

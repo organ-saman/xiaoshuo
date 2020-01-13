@@ -38,7 +38,6 @@ public class NovelContentService implements INovelContentService {
             Novel novelbyName = iNovelService.getNovelbyName(novelName);
             if(novelbyName != null){
                 Integer id = novelbyName.getId();
-                chapterId = chapterId + 1;
                 NovelContent novelContent = novelContentDao.selectOne(id, chapterId);
                 if(novelContent != null){
                     return novelContent;
